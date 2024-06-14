@@ -24,7 +24,7 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-            <div className="search-bar-container">
+        <div className="search-bar-container">
           <div className="input-group">
             <input
               type="text"
