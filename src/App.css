@@ -1,0 +1,28 @@
+.search-bar-container {
+  max-width: 600px;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+}
+
+.input-group .form-control {
+  border-right: 0;
+}
+
+.input-group .input-group-text {
+  background: white;
+  border-right: 0;
+}
+
+/* .input-group .form-control+.form-control {
+  border-left: 0;
+} */
+
+.input-group .input-group-append .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group .input-group-prepend .input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
