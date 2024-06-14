@@ -26,3 +26,14 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+
+.event-thumbnail {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.card-border:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
