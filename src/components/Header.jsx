@@ -24,17 +24,7 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* <div className="input-group" style={{ width: "400px" }}>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Username"
-            aria-label="Username"
-          />
-          <span className="input-group-text">@</span>
-        </div> */}
-
-        <div className="search-bar-container">
+            <div className="search-bar-container">
           <div className="input-group">
             <input
               type="text"
@@ -70,7 +60,7 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <button
-              className="btn btn-info text-light"
+              className="btn  text-light"
               style={{ background: "#00798a" }}
             >
               Sign Up
