@@ -8,7 +8,7 @@ const EventCard = () => {
 
   const [listOfEvents, setListOfEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
-
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     if (data && data.events.length > 0) {
       setListOfEvents(data.events);
@@ -31,13 +31,37 @@ const EventCard = () => {
     }
   };
 
+  const handleSearchbar = (e) => {
+    const { value } = e.target;
+    setSearchText(value);
+    searchText.length === 0
+      ? setFilteredEvents(listOfEvents)
+      : setFilteredEvents(
+          listOfEvents.filter(
+            (event) =>
+              event.title.toLowerCase().includes(value.toLowerCase()) ||
+              event.eventTags
+                .join(", ")
+                .toLowerCase()
+                .includes(value.toLowerCase())
+          )
+        );
+  };
   return (
     <div className="container my-4">
-      <div className="row align-items-center">
-        <div className="col-md-10">
+      <div className="row align-items-center justify-content-between">
+        <div className="col-md-4">
           <h1>Meetup Events</h1>
         </div>
-        <div className="col-md-2 text-md-end">
+        <div className="col-md-5 d-flex justify-content-end float-end">
+          <input
+            className="form-control me-2"
+            type="search"
+            placeholder="Search event by title and tags"
+            aria-label="Search"
+            value={searchText}
+            onChange={handleSearchbar}
+          />
           <select className="form-select" onChange={handleEventChange}>
             <option value="all">Select Event Type</option>
             <option value="online">Online</option>
@@ -45,6 +69,7 @@ const EventCard = () => {
           </select>
         </div>
       </div>
+
       <div className="row">
         {filteredEvents?.map((event) => {
           return (
