@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import useFetch from "../useFetch";
 import { format, isValid } from "date-fns";
 import { Clock, GeoAlt, CurrencyRupee } from "react-bootstrap-icons";
+import Footer from "../components/Footer";
 
 const EventDetails = () => {
   const { eventId } = useParams();
@@ -114,7 +115,7 @@ const EventDetails = () => {
                     Age Restrictions:{" "}
                     {event?.additionalInformation?.ageRestrictions}
                   </p>
-                  <div className="text-center">
+                  <div className="text-center pt-2">
                     <button className="btn btn-danger px-5">RSVP</button>
                   </div>
                 </div>
@@ -148,6 +149,7 @@ const EventDetails = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
