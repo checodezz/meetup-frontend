@@ -55,7 +55,7 @@ const EventCard = () => {
   return (
     <div className="container my-4">
       <div className="row align-items-center justify-content-between">
-        <div className="col-md-4">
+        <div className="col-md-4 pb-3">
           <h1>Meetup Events</h1>
         </div>
         <div className="col-md-5 d-flex justify-content-end float-end">

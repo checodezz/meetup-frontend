@@ -67,7 +67,9 @@ const EventDetails = () => {
               <div className="pt-3">
                 <h5>Evnt Tags :</h5>
                 {event?.eventTags.map((tag) => (
-                  <button className="btn btn-danger m-4">{tag}</button>
+                  <button key={tag} className="btn btn-danger m-4">
+                    {tag}
+                  </button>
                 ))}
               </div>
             </div>

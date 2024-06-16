@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div className="container row p-5 m-5">
-      <div className="mb-5 col-md-8 px-5 container">
+      <div className="mb-1 col-md-8 px-5 container">
         <h1 className="fw-bold  display-5 pb-3">
           The people platform—Where interests become friendships
         </h1>
