@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 import * as Icon from "react-bootstrap-icons";
 import { format } from "date-fns";
 
 const EventCard = () => {
-  const { data, loading, error } = useFetch("http://localhost:3000/event");
+  const { data, loading, error } = useFetch(
+    "https://meetup-backend-five.vercel.app/event"
+  );
 
   const [listOfEvents, setListOfEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
@@ -51,6 +53,21 @@ const EventCard = () => {
       );
     }
   };
+  if (loading) {
+    return (
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+  if (error) {
+    return <p>Error....</p>;
+  }
 
   return (
     <div className="container my-4">
