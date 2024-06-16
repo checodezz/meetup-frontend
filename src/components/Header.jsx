@@ -2,7 +2,7 @@ import * as Icon from "react-bootstrap-icons";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg ">
+    <nav className="navbar navbar-expand-lg mb-0 pb-0">
       <div className="container-fluid ">
         <a className="navbar-brand" href="#">
           <img
