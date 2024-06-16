@@ -97,7 +97,7 @@ const EventDetails = () => {
                 </div>
                 <div className="text-center">
                   <img
-                    src="https://maps-googleapis.meetup.com/maps/api/staticmap?center=12.935211%2C%2077.61689&zoom=17&size=480x300&format=png&scale=1&key=AIzaSyBhcQiQISkjMBwLAugJj8V78nMPfitnr44&markers=icon%3Ahttps%3A%2F%2Fsecure.meetupstatic.com%2Fnext%2Fimages%2Fevent%2Fmup-custom-google-map-pin.png%7Ccolor%3A0xF65858%7C12.935211%2C%2077.61689"
+                    src="https://appassets.mvtdev.com/map/41/s/3620/198875468.jpg"
                     alt="maps-image"
                     className="img-fluid"
                     style={{ width: "100%", objectFit: "cover" }}
