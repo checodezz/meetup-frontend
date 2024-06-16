@@ -22,11 +22,13 @@ const EventCard = () => {
 
   const handleEventChange = (e) => {
     const { value } = e.target;
-    value === "all"
-      ? listOfEvents
-      : setFilteredEvents(
-          listOfEvents.filter((event) => event?.eventType == value)
-        );
+    if (value === "all") {
+      setFilteredEvents(listOfEvents);
+    } else {
+      setFilteredEvents(
+        listOfEvents.filter((event) => event.eventType === value)
+      );
+    }
   };
 
   return (
