@@ -123,8 +123,8 @@ const EventDetails = () => {
                 </div>
               </div>
               <div className="row mt-3 container">
-                <div className="col-12">
-                  <h3 className="mb-3">Speakers</h3>
+                <div className="col-12 pt-2">
+                  <h3 className="mb-3">Speakers ({event?.speakers.length})</h3>
                 </div>
                 {event?.speakers.map((speaker, index) => (
                   <div
